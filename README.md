@@ -1,6 +1,11 @@
 
-## 20210320. 通过修改，学习
-
+## 20210320. 下载gin-vue-admin源码，修改，学习
+```
+git init
+git remote add origin https://github.com/blaunicorn/gin-vue-admin.git
+git add .
+git push -u origin master
+```
 
 <div align=center>
 <img src="http://qmplusimg.henrongyi.top/gvalogo.jpg" width=300" height="300" />
