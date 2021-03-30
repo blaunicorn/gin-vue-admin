@@ -6,7 +6,16 @@ git remote add origin https://github.com/blaunicorn/gin-vue-admin.git
 git add .
 git push -u origin master
 ```
+###  整合 vue-element-admin  vue-ruoyi gin-vue-admin 取长补短
+//
+整体框架参考gin-vue-admin https://www.gin-vue-admin.com/
+整体组件参考vue-element-admin   https://gitee.com/panjiachen/vue-element-admin
+优化组件参考 vue-ruoyi  http://www.ruoyi.vip/
 
+计划增加mock.js数据，少部分脱离gin-vue-admin环境
+
+增加常用的 年、季、月、周、日统一时间组件 
+https://www.jianshu.com/p/505abf918132?share_token=302e8582-fe5c-4774-b89b-d66855429c14
 <div align=center>
 <img src="http://qmplusimg.henrongyi.top/gvalogo.jpg" width=300" height="300" />
 </div>
