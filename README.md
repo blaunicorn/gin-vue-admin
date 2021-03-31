@@ -12,8 +12,45 @@ git push -u origin master
 整体组件参考vue-element-admin   https://gitee.com/panjiachen/vue-element-admin
 优化组件参考 vue-ruoyi  http://www.ruoyi.vip/
 
-计划增加mock.js数据，少部分脱离gin-vue-admin环境
+增加配置文件，方便修改系统名称
+\src\settings.js
 
+
+计划增加mock.js数据，少部分脱离gin-vue-admin环境
+### 20210331 完成用户登录、验证码，获取菜单的mock模拟数据，其他数据采用gin后台数据
+```js
+  devServer: {
+    port: 8080,
+    open: true,
+    overlay: {
+      warnings: false,
+      errors: true
+    },
+    proxy: {
+      // 把key的路径代理到target位置
+      // detail: https://cli.vuejs.org/config/#devserver-proxy
+      [process.env.VUE_APP_BASE_API]: { //需要代理的路径   例如 '/api'
+        target: `http://demo.gin-vue-admin.com/api`, //代理到 目标路径
+        changeOrigin: true,
+        pathRewrite: { // 修改路径数据
+          ['^' + process.env.VUE_APP_BASE_API]: '' // 举例 '^/api:""' 把路径中的/api字符串删除
+        }
+      }
+    },
+    after: require('./mock/mock-server.js')
+  },
+```
+```js
+// web\mock\user.js
+    // demo checkdb
+    {
+        url: '/api/init/checkdb',
+        type: 'post',
+        response: _ => {
+            return { "code": 0, "data": { "needInit": false }, "msg": "数据库无需初始化1" }
+        }
+    }
+```
 增加常用的 年、季、月、周、日统一时间组件 
 https://www.jianshu.com/p/505abf918132?share_token=302e8582-fe5c-4774-b89b-d66855429c14
 <div align=center>
