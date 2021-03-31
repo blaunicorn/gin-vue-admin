@@ -152,7 +152,7 @@
       :page-sizes="[10, 30, 50, 100]"
       :style="{ float: 'right', padding: '20px' }"
       :total="total"
-      pager-count="5"
+      :pager-count="Number(5)"
       @current-change="handleCurrentChange"
       @size-change="handleSizeChange"
       layout="total, sizes, prev, pager, next, jumper"

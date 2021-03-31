@@ -5,8 +5,9 @@ import context from '@/main.js'
 import router from '@/router/index'
 
 const service = axios.create({
-    baseURL: process.env.VUE_APP_BASE_API,
-    timeout: 99999
+    baseURL: process.env.VUE_APP_BASE_API, // url = base url + request url
+    withCredentials: true, // send cookies when cross-domain requests
+    timeout: 5000 // request timeout
 })
 let acitveAxios = 0
 let timer
@@ -23,13 +24,13 @@ const showLoading = () => {
 }
 
 const closeLoading = () => {
-        acitveAxios--
-        if (acitveAxios <= 0) {
-            clearTimeout(timer)
-            context.$bus.emit("closeLoading")
-        }
+    acitveAxios--
+    if (acitveAxios <= 0) {
+        clearTimeout(timer)
+        context.$bus.emit("closeLoading")
     }
-    //http request 拦截器
+}
+//http request 拦截器
 service.interceptors.request.use(
     config => {
         if (!config.donNotShowLoading) {
@@ -61,18 +62,18 @@ service.interceptors.request.use(
 service.interceptors.response.use(
     response => {
         closeLoading()
-
+        console.log(response)
         if (response.headers["new-token"]) {
             store.commit('user/setToken', response.headers["new-token"])
         }
-        if(response.data.code == 0){
-            if(response.data.data.needInit){
+        if (response.data.code == 0) {
+            if (response.data.data.needInit) {
                 Message({
-                    type:"info",
-                    message:"您是第一次使用，请初始化"
+                    type: "info",
+                    message: "您是第一次使用，请初始化"
                 })
-                    store.commit("user/NeedInit")
-                    router.push({name:"init"})
+                store.commit("user/NeedInit")
+                router.push({ name: "init" })
             }
         }
         if (response.data.code == 0 || response.headers.success === "true") {
@@ -81,7 +82,7 @@ service.interceptors.response.use(
             Message({
                 showClose: true,
                 message: response.data.msg || decodeURI(response.headers.msg),
-                type: response.headers.msgtype||'error',
+                type: response.headers.msgtype || 'error',
             })
             if (response.data.data && response.data.data.reload) {
                 store.commit('user/LoginOut')

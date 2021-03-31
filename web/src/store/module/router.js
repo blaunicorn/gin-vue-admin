@@ -35,7 +35,7 @@ export const router = {
             const baseRouter = [{
                 path: '/layout',
                 name: 'layout',
-                component: "view/layout/index.vue",
+                component: "layout/index.vue",
                 meta: {
                     title: "底层layout"
                 },

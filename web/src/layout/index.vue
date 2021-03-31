@@ -10,7 +10,7 @@
       <el-aside class="main-cont main-left">
         <div class="tilte">
           <img alt class="logoimg" src="~@/assets/nav_logo.png" />
-          <h2 class="tit-text" v-if="isSider">Gin-Vue-Admin</h2>
+          <h2 class="tit-text" v-if="isSider">{{ title }}</h2>
         </div>
         <Aside class="aside" />
       </el-aside>
@@ -121,17 +121,18 @@
 </template>
 
 <script>
-  import Aside from '@/view/layout/aside';
-  import HistoryComponent from '@/view/layout/aside/historyComponent/history';
-  import Screenfull from '@/view/layout/screenfull';
-  import Search from '@/view/layout/search/search';
-  import BottomInfo from '@/view/layout/bottomInfo/bottomInfo';
+  import Aside from '@/layout/aside';
+  import HistoryComponent from '@/layout/aside/historyComponent/history';
+  import Screenfull from '@/layout/screenfull';
+  import Search from '@/layout/search/search';
+  import BottomInfo from '@/layout/bottomInfo/bottomInfo';
   import { mapGetters, mapActions } from 'vuex';
   import CustomPic from '@/components/customPic';
   export default {
     name: 'Layout',
     data() {
       return {
+        title: '综合管理平台',
         show: false,
         isCollapse: false,
         isSider: true,
@@ -175,7 +176,7 @@
     },
     computed: {
       ...mapGetters('user', ['userInfo']),
-      title() {
+      currentTitle() {
         return this.$route.meta.title || '当前页面';
       },
       matched() {

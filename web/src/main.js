@@ -111,13 +111,13 @@ Dialog.props.closeOnClickModal.default = false
 
 // 引入封装的router
 import router from '@/router/index'
+import { store } from '@/store/index'
 
 // time line css
 import '../node_modules/timeline-vuejs/dist/timeline-vuejs.css'
 
-import '@/permission'
-import { store } from '@/store/index'
-Vue.config.productionTip = false
+// import '@/assets/icons' // icon
+import '@/permission' // permission control
 
 // 路由守卫
 import Bus from '@/utils/bus.js'
@@ -138,6 +138,22 @@ auth(Vue)
 import uploader from 'vue-simple-uploader'
 Vue.use(uploader)
 
+/**
+ * If you don't want to use mock-server
+ * you want to use MockJs for mock api
+ * you can execute: mockXHR()
+ *
+ * Currently MockJs will be used in the production environment,
+ * please remove it before going online ! ! !
+ */
+// if (process.env.NODE_ENV === 'production') {
+const { mockXHR } = require('../mock')
+mockXHR()
+// }
+
+
+
+Vue.config.productionTip = false
 export default new Vue({
     render: h => h(App),
     router,

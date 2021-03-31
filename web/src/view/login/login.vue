@@ -6,9 +6,9 @@
           <img class="logo_login" src="@/assets/logo_login.png" alt="" />
         </div>
         <div class="header">
-          <a href="/">
+          <a href="">
             <!-- <img src="~@/assets/logo.png" class="logo" alt="logo" /> -->
-            <span class="title">Gin-Vue-Admin</span>
+            <span class="title">综合管理系统</span>
           </a>
         </div>
       </div>
@@ -64,7 +64,7 @@
       </div>
 
       <div class="footer">
-        <div class="links">
+        <!-- <div class="links">
           <a href="https://www.gin-vue-admin.com/"
             ><img src="@/assets/docs.png" class="link-icon"
           /></a>
@@ -77,9 +77,10 @@
           <a href="https://space.bilibili.com/322210472"
             ><img src="@/assets/video.png" class="link-icon"
           /></a>
-        </div>
-        <div class="copyright">
-          Copyright &copy; {{ curYear }} Modify 💖 wcy
+        </div> -->
+        <!--  底部  -->
+        <div class="copyright el-login-footer">
+          Copyright &copy; {{ curYear }} Modify 💖 学海无涯
         </div>
       </div>
     </div>
@@ -112,7 +113,7 @@
         loginForm: {
           username: 'admin',
           password: '123456',
-          captcha: '',
+          captcha: '625307', //模拟数据
           captchaId: '',
         },
         rules: {
@@ -165,4 +166,17 @@
 
 <style scoped lang="scss">
   @import '@/style/login.scss';
+  .el-login-footer {
+    height: 40px;
+    line-height: 40px;
+    margin-left: -20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-family: Arial;
+    font-size: 12px;
+    // letter-spacing: 1px;
+  }
 </style>

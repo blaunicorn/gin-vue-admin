@@ -3,14 +3,12 @@
     <div>
       <span>Powered by</span>
       <span>
-        <a href="https://github.com/flipped-aurora/gin-vue-admin"
-          >gin-vue-admin</a
-        >
+        <a href="https://github.com/blaunicorn/gin-vue-admin">gin-vue-admin</a>
       </span>
       <el-divider direction="vertical"></el-divider>
       <span>Copyright</span>
       <span>
-        <a href="https://github.com/flipped-aurora">团队</a>
+        <a href="https://www.tisuba.com">学海无涯</a>
       </span>
     </div>
   </div>
