@@ -113,7 +113,7 @@ module.exports = [
                         "path": "workingFluidLevel",
                         "name": "workingFluidLevel",
                         "hidden": false,
-                        "component": "view/workingFluidLevel/index",
+                        "component": "view/workingFluidLevel/index.vue",
                         "sort": 3,
                         "meta": {
                             "keepAlive": false,
@@ -133,7 +133,7 @@ module.exports = [
                                 "path": "realTimeData",
                                 "name": "realTimeData",
                                 "hidden": false,
-                                "component": "view/workingFluidLevel/index",
+                                "component": "view/workingFluidLevel/realTimeData.vue",
                                 "sort": 1,
                                 "meta": {
                                     "keepAlive": true,
@@ -157,10 +157,10 @@ module.exports = [
                                 "path": "dataAnalysis",
                                 "name": "dataAnalysis",
                                 "hidden": false,
-                                "component": "view/workingFluidLevel/dataAnalysis",
+                                "component": "view/workingFluidLevel/dataAnalysis.vue",
                                 "sort": 2,
                                 "meta": {
-                                    "keepAlive": true,
+                                    "keepAlive": false,
                                     "defaultMenu": false,
                                     "title": "数据分析",
                                     "icon": "magic-stick",
@@ -177,7 +177,7 @@ module.exports = [
                                 "ID": 317,
                                 "CreatedAt": "2021-03-04T19:44:08+08:00",
                                 "UpdatedAt": "2021-03-04T19:44:08+08:00",
-                                "parentId": "318",
+                                "parentId": "314",
                                 "path": "historicalData"
                                 ,
                                 "name": "historicalData"
@@ -195,7 +195,7 @@ module.exports = [
                                     "closeTab": false
                                 },
                                 "authoritys": null,
-                                "menuId": "316",
+                                "menuId": "317",
                                 "children": null,
                                 "parameters": [
 
@@ -205,7 +205,7 @@ module.exports = [
                                 "ID": 318,
                                 "CreatedAt": "2021-03-04T19:44:08+08:00",
                                 "UpdatedAt": "2021-03-04T19:44:08+08:00",
-                                "parentId": "318",
+                                "parentId": "314",
                                 "path": "deviceManagement"
                                 ,
                                 "name": "deviceManagement"
@@ -223,7 +223,7 @@ module.exports = [
                                     "closeTab": false
                                 },
                                 "authoritys": null,
-                                "menuId": "316",
+                                "menuId": "318",
                                 "children": null,
                                 "parameters": [
 

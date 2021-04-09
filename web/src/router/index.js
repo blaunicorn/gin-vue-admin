@@ -57,7 +57,7 @@ const baseRouters = [{
     //     children: [
     //         {
     //             path: 'realTimeData',
-    //             component: () => import('@/view/workingFluidLevel/index'),
+    //             component: () => import('@/view/workingFluidLevel/realTimeData'),
     //             name: 'RealTimeData',
     //             meta: { title: '实时数据' }
     //         },
