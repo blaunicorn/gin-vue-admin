@@ -54,14 +54,14 @@
       min-height: 100%;
       background: #f0f2f5 url(~@/assets/background.svg) no-repeat 50%;
       background-size: 100%;
-      padding: 110px 0 144px;
+    //   padding: 110px 0 144px;
       a {
         text-decoration: none;
       }
   
       .top {
         text-align: center;
-        margin-top: -40px;
+        margin-top: 60px;
         .header {
           height: 44px;
           line-height: 44px;
@@ -108,7 +108,7 @@
       .footer {
         position: relative;
         width: 100%;
-        padding: 0 20px;
+        padding: 0 0;
         margin: 40px 0 10px;
         text-align: center;
         .links {

@@ -164,7 +164,7 @@
   };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
   @import '@/style/login.scss';
   .el-login-footer {
     height: 40px;

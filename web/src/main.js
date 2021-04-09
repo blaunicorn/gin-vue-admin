@@ -1,9 +1,9 @@
 import Vue from 'vue'
-import App from './App.vue'
 
 //  按需引入element
 import {
     Button,
+    ButtonGroup,
     Select,
     Dialog,
     Form,
@@ -56,6 +56,7 @@ import {
 } from 'element-ui';
 
 Vue.use(Button);
+Vue.use(ButtonGroup);
 Vue.use(Select);
 Vue.use(Dialog);
 Vue.use(Form);
@@ -108,7 +109,9 @@ Vue.prototype.$loading = Loading.service;
 Vue.prototype.$message = Message;
 Vue.prototype.$confirm = MessageBox.confirm;
 Dialog.props.closeOnClickModal.default = false
+import 'element-ui/lib/theme-chalk/index.css';
 
+import App from './App.vue'
 // 引入封装的router
 import router from '@/router/index'
 import { store } from '@/store/index'
