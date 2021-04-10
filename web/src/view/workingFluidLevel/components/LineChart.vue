@@ -62,10 +62,11 @@
         this.chart = echarts.init(this.$el, 'macarons');
         this.setOptions(this.chartData);
       },
-      setOptions({ expectedData, actualData } = {}) {
+      setOptions({ yData, xData } = {}) {
         this.chart.setOption({
           xAxis: {
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            data: xData,
+            // data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
             boundaryGap: false,
             axisTick: {
               show: false,
@@ -91,11 +92,23 @@
             },
           },
           legend: {
-            data: ['expected', 'actual'],
+            data: ['液面深度'],
           },
+          dataZoom: [
+            {
+              type: 'slider',
+              xAxisIndex: 0,
+              filterMode: 'none',
+            },
+            {
+              type: 'inside',
+              xAxisIndex: 0,
+              filterMode: 'none',
+            },
+          ],
           series: [
             {
-              name: 'expected',
+              name: '液面深度',
               itemStyle: {
                 normal: {
                   color: '#FF005A',
@@ -107,29 +120,9 @@
               },
               smooth: true,
               type: 'line',
-              data: expectedData,
+              data: yData,
               animationDuration: 2800,
               animationEasing: 'cubicInOut',
-            },
-            {
-              name: 'actual',
-              smooth: true,
-              type: 'line',
-              itemStyle: {
-                normal: {
-                  color: '#3888fa',
-                  lineStyle: {
-                    color: '#3888fa',
-                    width: 2,
-                  },
-                  areaStyle: {
-                    color: '#f3f8ff',
-                  },
-                },
-              },
-              data: actualData,
-              animationDuration: 2800,
-              animationEasing: 'quadraticOut',
             },
           ],
         });

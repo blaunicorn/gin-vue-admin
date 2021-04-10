@@ -53,6 +53,7 @@ for (let i = 0; i < count; i++) {
 //         platforms: ['a-platform']
 //     }))
 // }
+const tree = [{ "id": 100, "label": "采油厂", "children": [{ "id": 101, "label": "302小队", "children": [{ "id": 103, "label": "101小队" }, { "id": 104, "label": "10400000" }, { "id": 105, "label": "10500000" }, { "id": 106, "label": "10600000" }, { "id": 107, "label": "10700000" }] }, { "id": 102, "label": "303小队", "children": [{ "id": 108, "label": "10800000" }, { "id": 109, "label": "10900000" }] }] }]
 
 module.exports = [
     {
@@ -83,7 +84,40 @@ module.exports = [
             }
         }
     },
+    // 获取树状结构
+    {
+        url: '/dept/treeselect',
+        type: 'get',
+        response: config => {
 
+
+
+            return {
+                code: 0,
+                data: tree,
+                message: "操作成功"
+            }
+
+
+        }
+    },
+    // 获取设备历史数据
+    {
+        url: '/dept/listDevice',
+        type: 'get',
+        response: config => {
+            const { id } = config.query
+            for (const article of List) {
+                if (article.id === +id) {
+                    return {
+                        code: 0,
+                        data: [{ "id": 100, "label": "若依科技", "children": [{ "id": 101, "label": "深圳总公司", "children": [{ "id": 103, "label": "研发部门" }, { "id": 104, "label": "市场部门" }, { "id": 105, "label": "测试部门" }, { "id": 106, "label": "财务部门" }, { "id": 107, "label": "运维部门" }] }, { "id": 102, "label": "长沙分公司", "children": [{ "id": 108, "label": "市场部门" }, { "id": 109, "label": "财务部门" }] }] }],
+                        message: "操作成功"
+                    }
+                }
+            }
+        }
+    },
     {
         url: '/vue-element-admin/article/detail',
         type: 'get',
@@ -92,7 +126,7 @@ module.exports = [
             for (const article of List) {
                 if (article.id === +id) {
                     return {
-                        code: 20000,
+                        code: 0,
                         data: article
                     }
                 }
