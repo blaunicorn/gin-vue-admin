@@ -7,10 +7,18 @@ export function treeselect(query) {
         params: query
     })
 }
-// 获取设备计算列表
+// 获取设备历史数据列表
 export function listDevice(query) {
     return request({
         url: '/dept/listDevice',
+        method: 'get',
+        params: query
+    })
+}
+// 获取设备设置列表
+export function listDeviceSetting(query) {
+    return request({
+        url: '/dept/listDeviceSetting',
         method: 'get',
         params: query
     })

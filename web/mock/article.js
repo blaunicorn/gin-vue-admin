@@ -33,6 +33,35 @@ for (let i = 0; i < count; i++) {
         platforms: ['a-platform']
     }))
 }
+const listDeviceSetting = []
+for (let i = 0; i < count; i++) {
+    listDeviceSetting.push(Mock.mock({
+        'id|1000000000-99999999999': 0,
+        title: '@number(1000000000, 99999999999)',
+        timestamp: +Mock.Random.date('T'),
+        liquid_level: '@float(300, 2000, 0, 3)',
+        echo_time: '@float(1, 500, 0, 3)',
+        sound_velocity: '@float(300, 500, 0, 3)',
+        casing_pressure: '@float(0, 0, 3, 3)',
+        voltage: '@float(11, 13, 3, 3)',
+        'period|1-200': 0,
+        'deep|500-2000': 0,
+        author: '@first',
+        reviewer: '@first',
+
+        content_short: 'mock data',
+        content: baseContent,
+        forecast: '@float(0, 100, 2, 2)',
+        importance: '@integer(1, 3)',
+        'type|1': ['CN', 'US', 'JP', 'EU'],
+        'status|1': ['online', 'offline'],
+        display_time: '@datetime',
+        comment_disabled: true,
+        pageviews: '@integer(300, 5000)',
+        image_uri,
+        platforms: ['a-platform']
+    }))
+}
 // for (let i = 0; i < count; i++) {
 //     List.push(Mock.mock({
 //         id: '@increment',
@@ -104,6 +133,40 @@ module.exports = [
     // 获取设备历史数据
     {
         url: '/dept/listDevice',
+        type: 'get',
+        response: config => {
+            const { id } = config.query
+            for (const article of List) {
+                if (article.id === +id) {
+                    return {
+                        code: 0,
+                        data: [{ "id": 100, "label": "若依科技", "children": [{ "id": 101, "label": "深圳总公司", "children": [{ "id": 103, "label": "研发部门" }, { "id": 104, "label": "市场部门" }, { "id": 105, "label": "测试部门" }, { "id": 106, "label": "财务部门" }, { "id": 107, "label": "运维部门" }] }, { "id": 102, "label": "长沙分公司", "children": [{ "id": 108, "label": "市场部门" }, { "id": 109, "label": "财务部门" }] }] }],
+                        message: "操作成功"
+                    }
+                }
+            }
+        }
+    },
+    // 获取设备历史数据
+    {
+        url: '/dept/listDevice',
+        type: 'get',
+        response: config => {
+            const { id } = config.query
+            for (const article of List) {
+                if (article.id === +id) {
+                    return {
+                        code: 0,
+                        data: [{ "id": 100, "label": "若依科技", "children": [{ "id": 101, "label": "深圳总公司", "children": [{ "id": 103, "label": "研发部门" }, { "id": 104, "label": "市场部门" }, { "id": 105, "label": "测试部门" }, { "id": 106, "label": "财务部门" }, { "id": 107, "label": "运维部门" }] }, { "id": 102, "label": "长沙分公司", "children": [{ "id": 108, "label": "市场部门" }, { "id": 109, "label": "财务部门" }] }] }],
+                        message: "操作成功"
+                    }
+                }
+            }
+        }
+    },
+    // 获取设备设定数据
+    {
+        url: '/dept/listDeviceSetting',
         type: 'get',
         response: config => {
             const { id } = config.query

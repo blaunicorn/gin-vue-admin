@@ -117,13 +117,19 @@
         </el-table>
 
         <el-pagination
-          v-show="total > 0"
+          :current-page="page"
+          :page-size="pageSize"
+          :page-sizes="[10, 30, 50, 100]"
+          :style="{ float: 'right', padding: '20px' }"
           :total="total"
-          :page.sync="queryParams.pageNum"
-          :limit.sync="queryParams.pageSize"
-          @pagination="getList"
-        />
-        <line-chart :width="'100%'" :chart-data="lineChartData" />
+          :pager-count="Number(5)"
+          @current-change="handleCurrentChange"
+          @size-change="handleSizeChange"
+          layout="total, sizes, prev, pager, next, jumper"
+        ></el-pagination>
+        <div class="clear">
+          <line-chart :width="'100%'" :chart-data="lineChartData" />
+        </div>
       </el-col>
     </el-row>
   </div>
@@ -139,6 +145,7 @@
   import TransactionTable from './components/TransactionTable';
   import TodoList from './components/TodoList';
   import BoxCard from './components/BoxCard';
+  import infoList from '@/mixins/infoList';
 
   const lineChartData = {
     newVisitis: {
@@ -149,6 +156,7 @@
 
   export default {
     name: 'DataAnalysis',
+    mixins: [infoList],
     components: {
       LineChart,
       RaddarChart,
