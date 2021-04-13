@@ -132,7 +132,7 @@
     name: 'Layout',
     data() {
       return {
-        title: '综合管理平台',
+        title: '数据安全接入管理',
         show: false,
         isCollapse: false,
         isSider: true,
@@ -363,11 +363,12 @@
   //     padding: 3px;
   //   }
   //   .tit-text {
-  //     display: inline-block;
-  //     color: #fff;
-  //     font-weight: 600;
-  //     font-size: 20px;
-  //     vertical-align: middle;
+  //   display: inline-block;
+  // transform: scale(0.6, 1.2);
+  // color: #fff;
+  //   font-weight: 600;
+  //   font-size: 20px;
+  //   vertical-align: middle;
   //   }
   // }
 

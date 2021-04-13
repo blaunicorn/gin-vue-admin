@@ -1,6 +1,6 @@
 module.exports = {
     // 应用系统名
-    title: '综合管理系统',
+    title: '数据安全接入管理系统1',
 
     /**
      * 侧边栏主题 深色主题theme-dark，浅色主题theme-light

@@ -8,7 +8,7 @@
         <div class="header">
           <a href="">
             <!-- <img src="~@/assets/logo.png" class="logo" alt="logo" /> -->
-            <span class="title">综合管理系统</span>
+            <span class="title">数据安全接入管理系统</span>
           </a>
         </div>
       </div>

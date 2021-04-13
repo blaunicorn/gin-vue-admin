@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = {
-    title: '综合管理系统',
+    title: '数据安全接入管理系统',
     baseCdnUrl: '//cdn.staticfile.org',
     cdns: [
         /**

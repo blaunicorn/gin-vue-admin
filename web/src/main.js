@@ -52,7 +52,8 @@ import {
     Steps,
     Upload,
     Progress,
-    MessageBox
+    MessageBox,
+    Image
 } from 'element-ui';
 
 Vue.use(Button);
@@ -104,6 +105,7 @@ Vue.use(Upload);
 Vue.use(Progress);
 Vue.use(Scrollbar);
 Vue.use(Loading.directive);
+Vue.use(Image);
 
 Vue.prototype.$loading = Loading.service;
 Vue.prototype.$message = Message;
@@ -115,6 +117,10 @@ import App from './App.vue'
 // 引入封装的router
 import router from '@/router/index'
 import { store } from '@/store/index'
+
+// 2021 引入vuetify
+import vuetify from "./plugins/vuetify";
+import '@mdi/font/css/materialdesignicons.css' // 不使用公网vuetify的样式和图标 cnpm install @mdi/font -D 后导入
 
 // time line css
 import '../node_modules/timeline-vuejs/dist/timeline-vuejs.css'

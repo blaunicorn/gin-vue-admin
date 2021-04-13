@@ -23,11 +23,28 @@ export function listDeviceSetting(query) {
         params: query
     })
 }
+//  模拟实时数据
 export function fetchList(query) {
     return request({
         url: '/vue-element-admin/article/list',
         method: 'get',
         params: query
+    })
+}
+//  拓实实时数据
+// @Tags menu
+// @Summary 根据id获取拓实实时数据
+// @Security ApiKeyAuth
+// @accept application/json
+// @Produce application/json
+// @Param data body api.GetById true "根据id获取菜单"
+// @Success 200 {string} json "{"success":true,"data":{},"msg":"获取成功"}"
+// @Router /menu/getApiById [post]
+export function fetchTuoshiRealTimeData(data) {
+    return request({
+        url: 'http://web.tuoshi.net.cn:8030/OilCommunicationService.asmx/ListDevEquipmentInfosEx',
+        method: 'post',
+        data
     })
 }
 

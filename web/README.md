@@ -1,4 +1,10 @@
-# qm-plus-vue-page
+### 20210413 增加vuetify ，融入六厂电参应用
+    "@mdi/font": "^5.7.55",
+    "vuetify": "^2.3.14",
+   
+    "vue-cli-plugin-vuetify": "^2.0.7",
+    "vue-template-compiler": "^2.6.12",
+    "vuetify-loader": "^1.3.0"
 
 ## Project setup
 ```

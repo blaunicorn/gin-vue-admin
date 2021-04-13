@@ -98,253 +98,254 @@ module.exports = [
     //         return { "code": 0, "data": { "user": { "ID": 1, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "uuid": "d44d5e74-25a8-43f1-8a31-ff67d7a5a099", "userName": "admin", "nickName": "超级管理员", "headerImg": "http://qmplusimg.henrongyi.top/gva_header.jpg", "authority": { "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "DeletedAt": null, "authorityId": "888", "authorityName": "普通用户", "parentId": "0", "dataAuthorityId": null, "children": null, "menus": null, "defaultRouter": "dashboard" }, "authorityId": "888" }, "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVVUlEIjoiZDQ0ZDVlNzQtMjVhOC00M2YxLThhMzEtZmY2N2Q3YTVhMDk5IiwiSUQiOjEsIlVzZXJuYW1lIjoiYWRtaW4iLCJOaWNrTmFtZSI6Iui2hee6p-euoeeQhuWRmCIsIkF1dGhvcml0eUlkIjoiODg4IiwiQnVmZmVyVGltZSI6ODY0MDAsImV4cCI6MTYxNzc3NzE5NywiaXNzIjoicW1QbHVzIiwibmJmIjoxNjE3MTcxMzk3fQ.C2OsZdTQytFmqlEIBda_WHOKoilp_dmoEEvYubIhcdc", "expiresAt": 1617777197000 }, "msg": "登录成功1" }
     //     }
     // },
-    // getMenu
-    {
-        url: '/menu/getMenu',
-        type: 'post',
-        response: _ => {
-            return {
-                "code": 0, "data": {
-                    "menus": [{ "ID": 22, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "https://www.gin-vue-admin.com", "name": "https://www.gin-vue-admin.com", "hidden": true, "component": "/", "sort": 0, "meta": { "keepAlive": false, "defaultMenu": false, "title": "官方网站", "icon": "s-home", "closeTab": false }, "authoritys": null, "menuId": "22", "children": null, "parameters": [] }, { "ID": 1, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "dashboard", "name": "dashboard", "hidden": false, "component": "view/dashboard/index.vue", "sort": 1, "meta": { "keepAlive": false, "defaultMenu": false, "title": "仪表盘", "icon": "setting", "closeTab": false }, "authoritys": null, "menuId": "1", "children": null, "parameters": [] }, { "ID": 3, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "admin", "name": "superAdmin", "hidden": false, "component": "view/superAdmin/index.vue", "sort": 3, "meta": { "keepAlive": false, "defaultMenu": false, "title": "应用管理", "icon": "user-solid", "closeTab": false }, "authoritys": null, "menuId": "3", "children": [{ "ID": 4, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "3", "path": "authority", "name": "authority", "hidden": false, "component": "view/superAdmin/authority/authority.vue", "sort": 1, "meta": { "keepAlive": false, "defaultMenu": false, "title": "角色管理", "icon": "s-custom", "closeTab": false }, "authoritys": null, "menuId": "4", "children": null, "parameters": [] }, { "ID": 19, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "3", "path": "dictionaryDetail/:id", "name": "dictionaryDetail", "hidden": true, "component": "view/superAdmin/dictionary/sysDictionaryDetail.vue", "sort": 1, "meta": { "keepAlive": false, "defaultMenu": false, "title": "字典详情", "icon": "s-order", "closeTab": false }, "authoritys": null, "menuId": "19", "children": null, "parameters": [] }, { "ID": 5, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "3", "path": "menu", "name": "menu", "hidden": false, "component": "view/superAdmin/menu/menu.vue", "sort": 2, "meta": { "keepAlive": true, "defaultMenu": false, "title": "菜单管理", "icon": "s-order", "closeTab": false }, "authoritys": null, "menuId": "5", "children": null, "parameters": [] }, { "ID": 6, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "3", "path": "api", "name": "api", "hidden": false, "component": "view/superAdmin/api/api.vue", "sort": 3, "meta": { "keepAlive": true, "defaultMenu": false, "title": "api管理", "icon": "s-platform", "closeTab": false }, "authoritys": null, "menuId": "6", "children": null, "parameters": [] }, { "ID": 7, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "3", "path": "user", "name": "user", "hidden": false, "component": "view/superAdmin/user/user.vue", "sort": 4, "meta": { "keepAlive": false, "defaultMenu": false, "title": "用户管理", "icon": "coordinate", "closeTab": false }, "authoritys": null, "menuId": "7", "children": null, "parameters": [] }, { "ID": 18, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "3", "path": "dictionary", "name": "dictionary", "hidden": false, "component": "view/superAdmin/dictionary/sysDictionary.vue", "sort": 5, "meta": { "keepAlive": false, "defaultMenu": false, "title": "字典管理", "icon": "notebook-2", "closeTab": false }, "authoritys": null, "menuId": "18", "children": null, "parameters": [] }, { "ID": 20, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "3", "path": "operation", "name": "operation", "hidden": false, "component": "view/superAdmin/operation/sysOperationRecord.vue", "sort": 6, "meta": { "keepAlive": false, "defaultMenu": false, "title": "操作历史", "icon": "time", "closeTab": false }, "authoritys": null, "menuId": "20", "children": null, "parameters": [] }], "parameters": [] },
-                    {
-                        "ID": 314,
-                        "CreatedAt": "2021-03-04T19:44:08+08:00",
-                        "UpdatedAt": "2021-03-04T19:44:08+08:00",
-                        "parentId": "0",
-                        "path": "workingFluidLevel",
-                        "name": "workingFluidLevel",
-                        "hidden": false,
-                        "component": "view/workingFluidLevel/index.vue",
-                        "sort": 3,
-                        "meta": {
-                            "keepAlive": false,
-                            "defaultMenu": false,
-                            "title": "动液面应用",
-                            "icon": "s-cooperation",
-                            "closeTab": false
-                        },
-                        "authoritys": null,
-                        "menuId": "314",
-                        "children": [
-                            {
-                                "ID": 315,
-                                "CreatedAt": "2021-03-04T19:44:08+08:00",
-                                "UpdatedAt": "2021-03-04T19:44:08+08:00",
-                                "parentId": "314",
-                                "path": "realTimeData",
-                                "name": "realTimeData",
-                                "hidden": false,
-                                "component": "view/workingFluidLevel/realTimeData.vue",
-                                "sort": 1,
-                                "meta": {
-                                    "keepAlive": true,
-                                    "defaultMenu": false,
-                                    "title": "实时数据",
-                                    "icon": "cpu",
-                                    "closeTab": false
-                                },
-                                "authoritys": null,
-                                "menuId": "315",
-                                "children": null,
-                                "parameters": [
 
-                                ]
-                            },
-                            {
-                                "ID": 316,
-                                "CreatedAt": "2021-03-04T19:44:08+08:00",
-                                "UpdatedAt": "2021-03-04T19:44:08+08:00",
-                                "parentId": "314",
-                                "path": "dataAnalysis",
-                                "name": "dataAnalysis",
-                                "hidden": false,
-                                "component": "view/workingFluidLevel/dataAnalysis.vue",
-                                "sort": 2,
-                                "meta": {
-                                    "keepAlive": false,
-                                    "defaultMenu": false,
-                                    "title": "数据分析",
-                                    "icon": "magic-stick",
-                                    "closeTab": false
-                                },
-                                "authoritys": null,
-                                "menuId": "316",
-                                "children": null,
-                                "parameters": [
+    // getMenu 暂时不用
+    // {
+    //     url: '/menu/getMenu',
+    //     type: 'post',
+    //     response: _ => {
+    //         return {
+    //             "code": 0, "data": {
+    //                 "menus": [{ "ID": 22, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "https://www.gin-vue-admin.com", "name": "https://www.gin-vue-admin.com", "hidden": true, "component": "/", "sort": 0, "meta": { "keepAlive": false, "defaultMenu": false, "title": "官方网站", "icon": "s-home", "closeTab": false }, "authoritys": null, "menuId": "22", "children": null, "parameters": [] }, { "ID": 1, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "dashboard", "name": "dashboard", "hidden": false, "component": "view/dashboard/index.vue", "sort": 1, "meta": { "keepAlive": false, "defaultMenu": false, "title": "仪表盘", "icon": "setting", "closeTab": false }, "authoritys": null, "menuId": "1", "children": null, "parameters": [] }, { "ID": 3, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "admin", "name": "superAdmin", "hidden": false, "component": "view/superAdmin/index.vue", "sort": 3, "meta": { "keepAlive": false, "defaultMenu": false, "title": "应用管理", "icon": "user-solid", "closeTab": false }, "authoritys": null, "menuId": "3", "children": [{ "ID": 4, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "3", "path": "authority", "name": "authority", "hidden": false, "component": "view/superAdmin/authority/authority.vue", "sort": 1, "meta": { "keepAlive": false, "defaultMenu": false, "title": "角色管理", "icon": "s-custom", "closeTab": false }, "authoritys": null, "menuId": "4", "children": null, "parameters": [] }, { "ID": 19, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "3", "path": "dictionaryDetail/:id", "name": "dictionaryDetail", "hidden": true, "component": "view/superAdmin/dictionary/sysDictionaryDetail.vue", "sort": 1, "meta": { "keepAlive": false, "defaultMenu": false, "title": "字典详情", "icon": "s-order", "closeTab": false }, "authoritys": null, "menuId": "19", "children": null, "parameters": [] }, { "ID": 5, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "3", "path": "menu", "name": "menu", "hidden": false, "component": "view/superAdmin/menu/menu.vue", "sort": 2, "meta": { "keepAlive": true, "defaultMenu": false, "title": "菜单管理", "icon": "s-order", "closeTab": false }, "authoritys": null, "menuId": "5", "children": null, "parameters": [] }, { "ID": 6, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "3", "path": "api", "name": "api", "hidden": false, "component": "view/superAdmin/api/api.vue", "sort": 3, "meta": { "keepAlive": true, "defaultMenu": false, "title": "api管理", "icon": "s-platform", "closeTab": false }, "authoritys": null, "menuId": "6", "children": null, "parameters": [] }, { "ID": 7, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "3", "path": "user", "name": "user", "hidden": false, "component": "view/superAdmin/user/user.vue", "sort": 4, "meta": { "keepAlive": false, "defaultMenu": false, "title": "用户管理", "icon": "coordinate", "closeTab": false }, "authoritys": null, "menuId": "7", "children": null, "parameters": [] }, { "ID": 18, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "3", "path": "dictionary", "name": "dictionary", "hidden": false, "component": "view/superAdmin/dictionary/sysDictionary.vue", "sort": 5, "meta": { "keepAlive": false, "defaultMenu": false, "title": "字典管理", "icon": "notebook-2", "closeTab": false }, "authoritys": null, "menuId": "18", "children": null, "parameters": [] }, { "ID": 20, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "3", "path": "operation", "name": "operation", "hidden": false, "component": "view/superAdmin/operation/sysOperationRecord.vue", "sort": 6, "meta": { "keepAlive": false, "defaultMenu": false, "title": "操作历史", "icon": "time", "closeTab": false }, "authoritys": null, "menuId": "20", "children": null, "parameters": [] }], "parameters": [] },
+    //                 {
+    //                     "ID": 314,
+    //                     "CreatedAt": "2021-03-04T19:44:08+08:00",
+    //                     "UpdatedAt": "2021-03-04T19:44:08+08:00",
+    //                     "parentId": "0",
+    //                     "path": "workingFluidLevel",
+    //                     "name": "workingFluidLevel",
+    //                     "hidden": false,
+    //                     "component": "view/workingFluidLevel/index.vue",
+    //                     "sort": 3,
+    //                     "meta": {
+    //                         "keepAlive": false,
+    //                         "defaultMenu": false,
+    //                         "title": "动液面应用",
+    //                         "icon": "s-cooperation",
+    //                         "closeTab": false
+    //                     },
+    //                     "authoritys": null,
+    //                     "menuId": "314",
+    //                     "children": [
+    //                         {
+    //                             "ID": 315,
+    //                             "CreatedAt": "2021-03-04T19:44:08+08:00",
+    //                             "UpdatedAt": "2021-03-04T19:44:08+08:00",
+    //                             "parentId": "314",
+    //                             "path": "realTimeData",
+    //                             "name": "realTimeData",
+    //                             "hidden": false,
+    //                             "component": "view/workingFluidLevel/realTimeData.vue",
+    //                             "sort": 1,
+    //                             "meta": {
+    //                                 "keepAlive": true,
+    //                                 "defaultMenu": false,
+    //                                 "title": "实时数据",
+    //                                 "icon": "cpu",
+    //                                 "closeTab": false
+    //                             },
+    //                             "authoritys": null,
+    //                             "menuId": "315",
+    //                             "children": null,
+    //                             "parameters": [
 
-                                ]
-                            },
-                            {
-                                "ID": 317,
-                                "CreatedAt": "2021-03-04T19:44:08+08:00",
-                                "UpdatedAt": "2021-03-04T19:44:08+08:00",
-                                "parentId": "314",
-                                "path": "historicalData"
-                                ,
-                                "name": "historicalData"
-                                ,
-                                "hidden": false,
-                                "component": "view/workingFluidLevel/historicalData"
-                                ,
-                                "sort": 3,
-                                "meta": {
-                                    "keepAlive": true,
-                                    "defaultMenu": false,
-                                    "title": "历史数据"
-                                    ,
-                                    "icon": "magic-stick",
-                                    "closeTab": false
-                                },
-                                "authoritys": null,
-                                "menuId": "317",
-                                "children": null,
-                                "parameters": [
+    //                             ]
+    //                         },
+    //                         {
+    //                             "ID": 316,
+    //                             "CreatedAt": "2021-03-04T19:44:08+08:00",
+    //                             "UpdatedAt": "2021-03-04T19:44:08+08:00",
+    //                             "parentId": "314",
+    //                             "path": "dataAnalysis",
+    //                             "name": "dataAnalysis",
+    //                             "hidden": false,
+    //                             "component": "view/workingFluidLevel/dataAnalysis.vue",
+    //                             "sort": 2,
+    //                             "meta": {
+    //                                 "keepAlive": false,
+    //                                 "defaultMenu": false,
+    //                                 "title": "数据分析",
+    //                                 "icon": "magic-stick",
+    //                                 "closeTab": false
+    //                             },
+    //                             "authoritys": null,
+    //                             "menuId": "316",
+    //                             "children": null,
+    //                             "parameters": [
 
-                                ]
-                            },
-                            {
-                                "ID": 318,
-                                "CreatedAt": "2021-03-04T19:44:08+08:00",
-                                "UpdatedAt": "2021-03-04T19:44:08+08:00",
-                                "parentId": "314",
-                                "path": "deviceManagement"
-                                ,
-                                "name": "deviceManagement"
-                                ,
-                                "hidden": false,
-                                "component": "view/workingFluidLevel/deviceManagement"
-                                ,
-                                "sort": 4,
-                                "meta": {
-                                    "keepAlive": true,
-                                    "defaultMenu": false,
-                                    "title": "设备管理"
-                                    ,
-                                    "icon": "magic-stick",
-                                    "closeTab": false
-                                },
-                                "authoritys": null,
-                                "menuId": "318",
-                                "children": null,
-                                "parameters": [
+    //                             ]
+    //                         },
+    //                         {
+    //                             "ID": 317,
+    //                             "CreatedAt": "2021-03-04T19:44:08+08:00",
+    //                             "UpdatedAt": "2021-03-04T19:44:08+08:00",
+    //                             "parentId": "314",
+    //                             "path": "historicalData"
+    //                             ,
+    //                             "name": "historicalData"
+    //                             ,
+    //                             "hidden": false,
+    //                             "component": "view/workingFluidLevel/historicalData"
+    //                             ,
+    //                             "sort": 3,
+    //                             "meta": {
+    //                                 "keepAlive": true,
+    //                                 "defaultMenu": false,
+    //                                 "title": "历史数据"
+    //                                 ,
+    //                                 "icon": "magic-stick",
+    //                                 "closeTab": false
+    //                             },
+    //                             "authoritys": null,
+    //                             "menuId": "317",
+    //                             "children": null,
+    //                             "parameters": [
 
-                                ]
-                            }
-                        ],
-                        "parameters": [
+    //                             ]
+    //                         },
+    //                         {
+    //                             "ID": 318,
+    //                             "CreatedAt": "2021-03-04T19:44:08+08:00",
+    //                             "UpdatedAt": "2021-03-04T19:44:08+08:00",
+    //                             "parentId": "314",
+    //                             "path": "deviceManagement"
+    //                             ,
+    //                             "name": "deviceManagement"
+    //                             ,
+    //                             "hidden": false,
+    //                             "component": "view/workingFluidLevel/deviceManagement"
+    //                             ,
+    //                             "sort": 4,
+    //                             "meta": {
+    //                                 "keepAlive": true,
+    //                                 "defaultMenu": false,
+    //                                 "title": "设备管理"
+    //                                 ,
+    //                                 "icon": "magic-stick",
+    //                                 "closeTab": false
+    //                             },
+    //                             "authoritys": null,
+    //                             "menuId": "318",
+    //                             "children": null,
+    //                             "parameters": [
 
-                        ]
-                    },
-                    {
-                        "ID": 414,
-                        "CreatedAt": "2021-03-04T19:44:08+08:00",
-                        "UpdatedAt": "2021-03-04T19:44:08+08:00",
-                        "parentId": "0",
-                        "path": "six",
-                        "name": "six",
-                        "hidden": false,
-                        "component": "view/workingFluidLevel/index.vue",
-                        "sort": 3,
-                        "meta": {
-                            "keepAlive": false,
-                            "defaultMenu": false,
-                            "title": "六厂电参应用",
-                            "icon": "s-cooperation",
-                            "closeTab": false
-                        },
-                        "authoritys": null,
-                        "menuId": "414",
-                        "children": [
-                            {
-                                "ID": 415,
-                                "CreatedAt": "2021-03-04T19:44:08+08:00",
-                                "UpdatedAt": "2021-03-04T19:44:08+08:00",
-                                "parentId": "314",
-                                "path": "sixrealTimeData",
-                                "name": "sixrealTimeData",
-                                "hidden": false,
-                                "component": "view/workingFluidLevel/realTimeData.vue",
-                                "sort": 1,
-                                "meta": {
-                                    "keepAlive": true,
-                                    "defaultMenu": false,
-                                    "title": "实时数据",
-                                    "icon": "cpu",
-                                    "closeTab": false
-                                },
-                                "authoritys": null,
-                                "menuId": "415",
-                                "children": null,
-                                "parameters": [
+    //                             ]
+    //                         }
+    //                     ],
+    //                     "parameters": [
 
-                                ]
-                            },
-                            {
-                                "ID": 417,
-                                "CreatedAt": "2021-03-04T19:44:08+08:00",
-                                "UpdatedAt": "2021-03-04T19:44:08+08:00",
-                                "parentId": "414",
-                                "path": "sixhistoricalData"
-                                ,
-                                "name": "sixhistoricalData"
-                                ,
-                                "hidden": false,
-                                "component": "view/workingFluidLevel/historicalData"
-                                ,
-                                "sort": 3,
-                                "meta": {
-                                    "keepAlive": true,
-                                    "defaultMenu": false,
-                                    "title": "历史数据"
-                                    ,
-                                    "icon": "magic-stick",
-                                    "closeTab": false
-                                },
-                                "authoritys": null,
-                                "menuId": "417",
-                                "children": null,
-                                "parameters": [
+    //                     ]
+    //                 },
+    //                 {
+    //                     "ID": 414,
+    //                     "CreatedAt": "2021-03-04T19:44:08+08:00",
+    //                     "UpdatedAt": "2021-03-04T19:44:08+08:00",
+    //                     "parentId": "0",
+    //                     "path": "six",
+    //                     "name": "six",
+    //                     "hidden": false,
+    //                     "component": "view/workingFluidLevel/index.vue",
+    //                     "sort": 3,
+    //                     "meta": {
+    //                         "keepAlive": false,
+    //                         "defaultMenu": false,
+    //                         "title": "六厂电参应用",
+    //                         "icon": "s-cooperation",
+    //                         "closeTab": false
+    //                     },
+    //                     "authoritys": null,
+    //                     "menuId": "414",
+    //                     "children": [
+    //                         {
+    //                             "ID": 415,
+    //                             "CreatedAt": "2021-03-04T19:44:08+08:00",
+    //                             "UpdatedAt": "2021-03-04T19:44:08+08:00",
+    //                             "parentId": "314",
+    //                             "path": "sixrealTimeData",
+    //                             "name": "sixrealTimeData",
+    //                             "hidden": false,
+    //                             "component": "view/workingFluidLevel/realTimeData.vue",
+    //                             "sort": 1,
+    //                             "meta": {
+    //                                 "keepAlive": true,
+    //                                 "defaultMenu": false,
+    //                                 "title": "实时数据",
+    //                                 "icon": "cpu",
+    //                                 "closeTab": false
+    //                             },
+    //                             "authoritys": null,
+    //                             "menuId": "415",
+    //                             "children": null,
+    //                             "parameters": [
 
-                                ]
-                            },
-                            {
-                                "ID": 418,
-                                "CreatedAt": "2021-03-04T19:44:08+08:00",
-                                "UpdatedAt": "2021-03-04T19:44:08+08:00",
-                                "parentId": "414",
-                                "path": "sixdeviceManagement"
-                                ,
-                                "name": "sixdeviceManagement"
-                                ,
-                                "hidden": false,
-                                "component": "view/workingFluidLevel/deviceManagement"
-                                ,
-                                "sort": 4,
-                                "meta": {
-                                    "keepAlive": true,
-                                    "defaultMenu": false,
-                                    "title": "设备管理"
-                                    ,
-                                    "icon": "magic-stick",
-                                    "closeTab": false
-                                },
-                                "authoritys": null,
-                                "menuId": "418",
-                                "children": null,
-                                "parameters": [
+    //                             ]
+    //                         },
+    //                         {
+    //                             "ID": 417,
+    //                             "CreatedAt": "2021-03-04T19:44:08+08:00",
+    //                             "UpdatedAt": "2021-03-04T19:44:08+08:00",
+    //                             "parentId": "414",
+    //                             "path": "sixhistoricalData"
+    //                             ,
+    //                             "name": "sixhistoricalData"
+    //                             ,
+    //                             "hidden": false,
+    //                             "component": "view/workingFluidLevel/historicalData"
+    //                             ,
+    //                             "sort": 3,
+    //                             "meta": {
+    //                                 "keepAlive": true,
+    //                                 "defaultMenu": false,
+    //                                 "title": "历史数据"
+    //                                 ,
+    //                                 "icon": "magic-stick",
+    //                                 "closeTab": false
+    //                             },
+    //                             "authoritys": null,
+    //                             "menuId": "417",
+    //                             "children": null,
+    //                             "parameters": [
 
-                                ]
-                            }
-                        ],
-                        "parameters": [
+    //                             ]
+    //                         },
+    //                         {
+    //                             "ID": 418,
+    //                             "CreatedAt": "2021-03-04T19:44:08+08:00",
+    //                             "UpdatedAt": "2021-03-04T19:44:08+08:00",
+    //                             "parentId": "414",
+    //                             "path": "sixdeviceManagement"
+    //                             ,
+    //                             "name": "sixdeviceManagement"
+    //                             ,
+    //                             "hidden": false,
+    //                             "component": "view/workingFluidLevel/deviceManagement"
+    //                             ,
+    //                             "sort": 4,
+    //                             "meta": {
+    //                                 "keepAlive": true,
+    //                                 "defaultMenu": false,
+    //                                 "title": "设备管理"
+    //                                 ,
+    //                                 "icon": "magic-stick",
+    //                                 "closeTab": false
+    //                             },
+    //                             "authoritys": null,
+    //                             "menuId": "418",
+    //                             "children": null,
+    //                             "parameters": [
 
-                        ]
-                    },
-                    { "ID": 8, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "person", "name": "person", "hidden": true, "component": "view/person/person.vue", "sort": 4, "meta": { "keepAlive": false, "defaultMenu": false, "title": "个人信息", "icon": "message-solid", "closeTab": false }, "authoritys": null, "menuId": "8", "children": null, "parameters": [] }, { "ID": 14, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "systemTools", "name": "systemTools", "hidden": true, "component": "view/systemTools/index.vue", "sort": 5, "meta": { "keepAlive": false, "defaultMenu": false, "title": "系统工具", "icon": "s-cooperation", "closeTab": false }, "authoritys": null, "menuId": "14", "children": [{ "ID": 15, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "14", "path": "autoCode", "name": "autoCode", "hidden": false, "component": "view/systemTools/autoCode/index.vue", "sort": 1, "meta": { "keepAlive": true, "defaultMenu": false, "title": "代码生成器", "icon": "cpu", "closeTab": false }, "authoritys": null, "menuId": "15", "children": null, "parameters": [] }, { "ID": 16, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "14", "path": "formCreate", "name": "formCreate", "hidden": false, "component": "view/systemTools/formCreate/index.vue", "sort": 2, "meta": { "keepAlive": true, "defaultMenu": false, "title": "表单生成器", "icon": "magic-stick", "closeTab": false }, "authoritys": null, "menuId": "16", "children": null, "parameters": [] }], "parameters": [] }, { "ID": 24, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "workflow", "name": "workflow", "hidden": true, "component": "view/workflow/index.vue", "sort": 5, "meta": { "keepAlive": false, "defaultMenu": false, "title": "工作流功能", "icon": "phone", "closeTab": false }, "authoritys": null, "menuId": "24", "children": [{ "ID": 25, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "24", "path": "workflowCreate", "name": "workflowCreate", "hidden": false, "component": "view/workflow/workflowCreate/workflowCreate.vue", "sort": 0, "meta": { "keepAlive": false, "defaultMenu": false, "title": "工作流绘制", "icon": "circle-plus", "closeTab": false }, "authoritys": null, "menuId": "25", "children": null, "parameters": [] }, { "ID": 26, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "24", "path": "workflowProcess", "name": "workflowProcess", "hidden": false, "component": "view/workflow/workflowProcess/workflowProcess.vue", "sort": 0, "meta": { "keepAlive": false, "defaultMenu": false, "title": "工作流列表", "icon": "s-cooperation", "closeTab": false }, "authoritys": null, "menuId": "26", "children": null, "parameters": [] }, { "ID": 27, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "24", "path": "workflowUse", "name": "workflowUse", "hidden": true, "component": "view/workflow/workflowUse/workflowUse.vue", "sort": 0, "meta": { "keepAlive": false, "defaultMenu": false, "title": "使用工作流", "icon": "video-play", "closeTab": false }, "authoritys": null, "menuId": "27", "children": null, "parameters": [] }, { "ID": 28, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "24", "path": "started", "name": "started", "hidden": false, "component": "view/workflow/userList/started.vue", "sort": 0, "meta": { "keepAlive": false, "defaultMenu": false, "title": "我发起的", "icon": "s-order", "closeTab": false }, "authoritys": null, "menuId": "28", "children": null, "parameters": [] }, { "ID": 29, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "24", "path": "need", "name": "need", "hidden": false, "component": "view/workflow/userList/need.vue", "sort": 0, "meta": { "keepAlive": false, "defaultMenu": false, "title": "我的待办", "icon": "s-platform", "closeTab": false }, "authoritys": null, "menuId": "29", "children": null, "parameters": [] }], "parameters": [] }, { "ID": 9, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "example", "name": "example", "hidden": true, "component": "view/example/index.vue", "sort": 6, "meta": { "keepAlive": false, "defaultMenu": false, "title": "示例文件", "icon": "s-management", "closeTab": false }, "authoritys": null, "menuId": "9", "children": [{ "ID": 10, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "9", "path": "excel", "name": "excel", "hidden": false, "component": "view/example/excel/excel.vue", "sort": 4, "meta": { "keepAlive": false, "defaultMenu": false, "title": "excel导入导出", "icon": "s-marketing", "closeTab": false }, "authoritys": null, "menuId": "10", "children": null, "parameters": [] }, { "ID": 11, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "9", "path": "upload", "name": "upload", "hidden": false, "component": "view/example/upload/upload.vue", "sort": 5, "meta": { "keepAlive": false, "defaultMenu": false, "title": "媒体库（上传下载）", "icon": "upload", "closeTab": false }, "authoritys": null, "menuId": "11", "children": null, "parameters": [] }, { "ID": 12, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "9", "path": "breakpoint", "name": "breakpoint", "hidden": false, "component": "view/example/breakpoint/breakpoint.vue", "sort": 6, "meta": { "keepAlive": false, "defaultMenu": false, "title": "断点续传", "icon": "upload", "closeTab": false }, "authoritys": null, "menuId": "12", "children": null, "parameters": [] }, { "ID": 21, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "9", "path": "simpleUploader", "name": "simpleUploader", "hidden": false, "component": "view/example/simpleUploader/simpleUploader", "sort": 6, "meta": { "keepAlive": false, "defaultMenu": false, "title": "断点续传（插件版）", "icon": "upload", "closeTab": false }, "authoritys": null, "menuId": "21", "children": null, "parameters": [] }, { "ID": 13, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "9", "path": "customer", "name": "customer", "hidden": false, "component": "view/example/customer/customer.vue", "sort": 7, "meta": { "keepAlive": false, "defaultMenu": false, "title": "客户列表（资源示例）", "icon": "s-custom", "closeTab": false }, "authoritys": null, "menuId": "13", "children": null, "parameters": [] }], "parameters": [] }, { "ID": 23, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "state", "name": "state", "hidden": false, "component": "view/system/state.vue", "sort": 6, "meta": { "keepAlive": false, "defaultMenu": false, "title": "服务器状态", "icon": "cloudy", "closeTab": false }, "authoritys": null, "menuId": "23", "children": null, "parameters": [] }, { "ID": 2, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "about", "name": "about", "hidden": false, "component": "view/about/index.vue", "sort": 7, "meta": { "keepAlive": false, "defaultMenu": false, "title": "关于我们", "icon": "info", "closeTab": false }, "authoritys": null, "menuId": "2", "children": null, "parameters": [] }]
-                }, "msg": "获取成功"
-            }
-        }
-    },
+    //                             ]
+    //                         }
+    //                     ],
+    //                     "parameters": [
+
+    //                     ]
+    //                 },
+    //                 { "ID": 8, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "person", "name": "person", "hidden": true, "component": "view/person/person.vue", "sort": 4, "meta": { "keepAlive": false, "defaultMenu": false, "title": "个人信息", "icon": "message-solid", "closeTab": false }, "authoritys": null, "menuId": "8", "children": null, "parameters": [] }, { "ID": 14, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "systemTools", "name": "systemTools", "hidden": true, "component": "view/systemTools/index.vue", "sort": 5, "meta": { "keepAlive": false, "defaultMenu": false, "title": "系统工具", "icon": "s-cooperation", "closeTab": false }, "authoritys": null, "menuId": "14", "children": [{ "ID": 15, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "14", "path": "autoCode", "name": "autoCode", "hidden": false, "component": "view/systemTools/autoCode/index.vue", "sort": 1, "meta": { "keepAlive": true, "defaultMenu": false, "title": "代码生成器", "icon": "cpu", "closeTab": false }, "authoritys": null, "menuId": "15", "children": null, "parameters": [] }, { "ID": 16, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "14", "path": "formCreate", "name": "formCreate", "hidden": false, "component": "view/systemTools/formCreate/index.vue", "sort": 2, "meta": { "keepAlive": true, "defaultMenu": false, "title": "表单生成器", "icon": "magic-stick", "closeTab": false }, "authoritys": null, "menuId": "16", "children": null, "parameters": [] }], "parameters": [] }, { "ID": 24, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "workflow", "name": "workflow", "hidden": true, "component": "view/workflow/index.vue", "sort": 5, "meta": { "keepAlive": false, "defaultMenu": false, "title": "工作流功能", "icon": "phone", "closeTab": false }, "authoritys": null, "menuId": "24", "children": [{ "ID": 25, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "24", "path": "workflowCreate", "name": "workflowCreate", "hidden": false, "component": "view/workflow/workflowCreate/workflowCreate.vue", "sort": 0, "meta": { "keepAlive": false, "defaultMenu": false, "title": "工作流绘制", "icon": "circle-plus", "closeTab": false }, "authoritys": null, "menuId": "25", "children": null, "parameters": [] }, { "ID": 26, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "24", "path": "workflowProcess", "name": "workflowProcess", "hidden": false, "component": "view/workflow/workflowProcess/workflowProcess.vue", "sort": 0, "meta": { "keepAlive": false, "defaultMenu": false, "title": "工作流列表", "icon": "s-cooperation", "closeTab": false }, "authoritys": null, "menuId": "26", "children": null, "parameters": [] }, { "ID": 27, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "24", "path": "workflowUse", "name": "workflowUse", "hidden": true, "component": "view/workflow/workflowUse/workflowUse.vue", "sort": 0, "meta": { "keepAlive": false, "defaultMenu": false, "title": "使用工作流", "icon": "video-play", "closeTab": false }, "authoritys": null, "menuId": "27", "children": null, "parameters": [] }, { "ID": 28, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "24", "path": "started", "name": "started", "hidden": false, "component": "view/workflow/userList/started.vue", "sort": 0, "meta": { "keepAlive": false, "defaultMenu": false, "title": "我发起的", "icon": "s-order", "closeTab": false }, "authoritys": null, "menuId": "28", "children": null, "parameters": [] }, { "ID": 29, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "24", "path": "need", "name": "need", "hidden": false, "component": "view/workflow/userList/need.vue", "sort": 0, "meta": { "keepAlive": false, "defaultMenu": false, "title": "我的待办", "icon": "s-platform", "closeTab": false }, "authoritys": null, "menuId": "29", "children": null, "parameters": [] }], "parameters": [] }, { "ID": 9, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "example", "name": "example", "hidden": true, "component": "view/example/index.vue", "sort": 6, "meta": { "keepAlive": false, "defaultMenu": false, "title": "示例文件", "icon": "s-management", "closeTab": false }, "authoritys": null, "menuId": "9", "children": [{ "ID": 10, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "9", "path": "excel", "name": "excel", "hidden": false, "component": "view/example/excel/excel.vue", "sort": 4, "meta": { "keepAlive": false, "defaultMenu": false, "title": "excel导入导出", "icon": "s-marketing", "closeTab": false }, "authoritys": null, "menuId": "10", "children": null, "parameters": [] }, { "ID": 11, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "9", "path": "upload", "name": "upload", "hidden": false, "component": "view/example/upload/upload.vue", "sort": 5, "meta": { "keepAlive": false, "defaultMenu": false, "title": "媒体库（上传下载）", "icon": "upload", "closeTab": false }, "authoritys": null, "menuId": "11", "children": null, "parameters": [] }, { "ID": 12, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "9", "path": "breakpoint", "name": "breakpoint", "hidden": false, "component": "view/example/breakpoint/breakpoint.vue", "sort": 6, "meta": { "keepAlive": false, "defaultMenu": false, "title": "断点续传", "icon": "upload", "closeTab": false }, "authoritys": null, "menuId": "12", "children": null, "parameters": [] }, { "ID": 21, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "9", "path": "simpleUploader", "name": "simpleUploader", "hidden": false, "component": "view/example/simpleUploader/simpleUploader", "sort": 6, "meta": { "keepAlive": false, "defaultMenu": false, "title": "断点续传（插件版）", "icon": "upload", "closeTab": false }, "authoritys": null, "menuId": "21", "children": null, "parameters": [] }, { "ID": 13, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "9", "path": "customer", "name": "customer", "hidden": false, "component": "view/example/customer/customer.vue", "sort": 7, "meta": { "keepAlive": false, "defaultMenu": false, "title": "客户列表（资源示例）", "icon": "s-custom", "closeTab": false }, "authoritys": null, "menuId": "13", "children": null, "parameters": [] }], "parameters": [] }, { "ID": 23, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "state", "name": "state", "hidden": false, "component": "view/system/state.vue", "sort": 6, "meta": { "keepAlive": false, "defaultMenu": false, "title": "服务器状态", "icon": "cloudy", "closeTab": false }, "authoritys": null, "menuId": "23", "children": null, "parameters": [] }, { "ID": 2, "CreatedAt": "2021-03-04T19:44:08+08:00", "UpdatedAt": "2021-03-04T19:44:08+08:00", "parentId": "0", "path": "about", "name": "about", "hidden": false, "component": "view/about/index.vue", "sort": 7, "meta": { "keepAlive": false, "defaultMenu": false, "title": "关于我们", "icon": "info", "closeTab": false }, "authoritys": null, "menuId": "2", "children": null, "parameters": [] }]
+    //             }, "msg": "获取成功"
+    //         }
+    //     }
+    // },
 
     // checkdb
     {

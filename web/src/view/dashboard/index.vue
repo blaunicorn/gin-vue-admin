@@ -2,7 +2,7 @@
   <div class="big">
     <el-row>
       <div class="card">
-        <el-col :xs="24" :lg="16" :md="16" >
+        <el-col :xs="24" :lg="16" :md="16">
           <div class="car-left">
             <el-row>
               <div>
@@ -24,7 +24,7 @@
             </el-row>
           </div>
         </el-col>
-        <el-col :xs="24" :lg='8' :md="8">
+        <el-col :xs="24" :lg="8" :md="8">
           <div class="car-right">
             <el-row>
               <el-col :span="8"
@@ -57,7 +57,7 @@
         </el-col>
       </div>
     </el-row>
-    <el-row>
+    <!-- <el-row>
       <el-card shadow="hover">
           <h2>
             使用教学：<a style="color:#409EFF"  target="view_window" href="https://www.bilibili.com/video/BV1fV411y7dT/">https://www.bilibili.com/video/BV1fV411y7dT/</a>
@@ -68,7 +68,7 @@
           </h2>
           <div></div>
       </el-card>
-    </el-row>
+    </el-row> -->
     <div class="shadow">
       <el-row :gutter="20">
         <el-col
@@ -103,113 +103,113 @@
 </template>
 
 <script>
-import musicPlayer from "./component/musicPlayer";
-import TodoList from "./component/todoList";
-import { mapGetters } from "vuex";
-export default {
-  name: "Dashboard",
-  data() {
-    return {
-      toolCards: [
-        {
-          label: "用户管理",
-          icon: "el-icon el-icon-monitor",
-          name: "user",
-          color: "#ff9c6e",
-        },
-        {
-          label: "角色管理",
-          icon: "el-icon el-icon-setting",
-          name: "authority",
-          color: "#69c0ff",
-        },
-        {
-          label: "菜单管理",
-          icon: "el-icon el-icon-menu",
-          name: "menu",
-          color: "#b37feb",
-        },
-        {
-          label: "代码生成器",
-          icon: "el-icon el-icon-cpu",
-          name: "autoCode",
-          color: "#ffd666",
-        },
-        {
-          label: "表单生成器",
-          icon: "el-icon el-icon-document-checked",
-          name: "formCreate",
-          color: "#ff85c0",
-        },
-        {
-          label: "关于我们",
-          icon: "el-icon el-icon-user",
-          name: "about",
-          color: "#5cdbd3",
-        },
-      ],
-    };
-  },
-  computed: {
-    ...mapGetters("user", ["userInfo"]),
-  },
-  components: {
-    musicPlayer, //音乐播放器
-    TodoList, //TodoList
-    // RaddarChart, //雷达图
-    // stackMap, //堆叠图
-    // Sunburst, //旭日图
-  },
-  methods: {
-    toTarget(name) {
-      this.$router.push({ name });
+  import musicPlayer from './component/musicPlayer';
+  import TodoList from './component/todoList';
+  import { mapGetters } from 'vuex';
+  export default {
+    name: 'Dashboard',
+    data() {
+      return {
+        toolCards: [
+          {
+            label: '用户管理',
+            icon: 'el-icon el-icon-monitor',
+            name: 'user',
+            color: '#ff9c6e',
+          },
+          {
+            label: '角色管理',
+            icon: 'el-icon el-icon-setting',
+            name: 'authority',
+            color: '#69c0ff',
+          },
+          {
+            label: '菜单管理',
+            icon: 'el-icon el-icon-menu',
+            name: 'menu',
+            color: '#b37feb',
+          },
+          {
+            label: '代码生成器',
+            icon: 'el-icon el-icon-cpu',
+            name: 'autoCode',
+            color: '#ffd666',
+          },
+          {
+            label: '表单生成器',
+            icon: 'el-icon el-icon-document-checked',
+            name: 'formCreate',
+            color: '#ff85c0',
+          },
+          {
+            label: '关于我们',
+            icon: 'el-icon el-icon-user',
+            name: 'about',
+            color: '#5cdbd3',
+          },
+        ],
+      };
     },
-  },
-};
+    computed: {
+      ...mapGetters('user', ['userInfo']),
+    },
+    components: {
+      musicPlayer, //音乐播放器
+      TodoList, //TodoList
+      // RaddarChart, //雷达图
+      // stackMap, //堆叠图
+      // Sunburst, //旭日图
+    },
+    methods: {
+      toTarget(name) {
+        this.$router.push({ name });
+      },
+    },
+  };
 </script>
 
 <style lang="scss" scoped>
-.big {
-  margin: 100px 0 0 0;
-  padding-top: 0;
-  background-color: rgb(243, 243, 243);
-  padding-top: 15px;
-  .top {
-    width: 100%;
-    height: 360px;
-    margin-top: 20px;
-    overflow: hidden;
-    .chart-container {
-      position: relative;
+  .big {
+    margin: 100px 0 0 0;
+    padding-top: 0;
+    background-color: rgb(243, 243, 243);
+    padding-top: 15px;
+    .top {
       width: 100%;
-      height: 100%;
-      padding: 20px;
-      background-color: #fff;
+      height: 360px;
+      margin-top: 20px;
+      overflow: hidden;
+      .chart-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background-color: #fff;
+      }
     }
-  }
-  .mid {
-    width: 100%;
-    height: 380px;
-    .chart-wrapper {
-      height: 340px;
-      background: #fff;
-      padding: 16px 16px 0;
-      margin-bottom: 32px;
-    }
-  }
-  .bottom {
-    width: 100%;
-    height: 300px;
-    // margin: 20px 0;
-    .el-row {
-      margin-right: 4px !important;
-    }
-    .chart-player {
+    .mid {
       width: 100%;
-      height: 270px;
-      padding: 10px;
-      background-color: #fff;
+      height: 380px;
+      .chart-wrapper {
+        height: 340px;
+        background: #fff;
+        padding: 16px 16px 0;
+        margin-bottom: 32px;
+      }
+    }
+    .bottom {
+      width: 100%;
+      height: 300px;
+      // margin: 20px 0;
+      .el-row {
+        margin-right: 4px !important;
+      }
+      .chart-player {
+        width: 100%;
+        height: 270px;
+        padding: 10px;
+        background-color: #fff;
+      }
     }
   }
-}
 </style>

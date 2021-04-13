@@ -207,6 +207,7 @@
     createArticle,
     updateArticle,
   } from '@/api/article';
+  import { fetchTuoshiRealTimeData } from '@/api/tuoshi';
   import { parseTime } from '@/utils/index.js';
   import timeComponent from '@/components/timeTable/timeComponent.vue';
 
@@ -315,7 +316,12 @@
       },
       getList() {
         this.listLoading = true;
-        fetchList(this.listQuery).then((response) => {
+        // 真实数据
+        let data = { departcode: 99 };
+        fetchTuoshiRealTimeData(data).then((response) => {
+          console.log(response);
+          // 模拟数据
+          // fetchList(this.listQuery).then((response) => {
           this.list = response.data.items;
           this.total = response.data.total;
           console.log(response.data);

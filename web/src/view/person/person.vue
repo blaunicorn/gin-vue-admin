@@ -30,12 +30,9 @@
               <ul>
                 <li><i class="el-icon-user"></i>{{ userInfo.nickName }}</li>
                 <li>
-                  <i class="el-icon-data-analysis"></i
-                  >北京反转极光科技有限公司-技术部-前端事业群
+                  <i class="el-icon-data-analysis"></i>信息公司数字油田项目组
                 </li>
-                <li>
-                  <i class="el-icon-video-camera-solid"></i>中国·北京市·朝阳区
-                </li>
+                <li><i class="el-icon-video-camera-solid"></i>中国·大庆</li>
                 <li>
                   <i class="el-icon-medal-1"></i>goLang/JavaScript/Vue/Gorm
                 </li>
